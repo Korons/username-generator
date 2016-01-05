@@ -2,10 +2,6 @@ import argparse
 import random
 import string
 
-import argparse
-import random
-import string
-
 parser = argparse.ArgumentParser(description='Generate fake data')
 parser.add_argument("-f", help="Firstname")
 parser.add_argument("-l", help="Lastname")
@@ -15,7 +11,7 @@ last = args.l
 char_set = string.ascii_uppercase + string.digits
 randstring = ''.join(random.sample(char_set*6, 6))
 replace_char = random.randint(1,10)
-user_name_how = random.randint(1,12)
+user_name_how = random.randint(1,11)
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 if user_name_how == 1:
 	user_name = first[0] + last
@@ -48,6 +44,8 @@ elif user_name_how == 11:
 	user_name = first[0:2] + last[0:2]
 elif user_name_how == 12:
 	user_name = first + random.choice(numbers)
+elif user_name_how == 13:
+	username = last[3:6] + last[0:2]
 else:
 	print "user_name_how unexpected vaule"
 if replace_char == 1:
