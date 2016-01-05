@@ -10,8 +10,8 @@ first = args.f
 last = args.l
 char_set = string.ascii_uppercase + string.digits
 randstring = ''.join(random.sample(char_set*6, 6))
-
-user_name_how = random.randint(1, 9)
+replace_char = random.randint(1,10)
+user_name_how = random.randint(1,10)
 if user_name_how == 1:
 	user_name = first[0] + last
 elif user_name_how == 2:
@@ -33,6 +33,18 @@ elif user_name_how == 8:
 	user_name = user_name.replace(" ", "")
 elif user_name_how == 9:
 	user_name = first + randstring
+elif user_name_how == 10:
+	first = first[:1].upper() + first[1:]
+	last = first[:1].upper() + last[1:]
+	user_name = first + last
+
 else:
 	print "user_name_how unexpected vaule"
+if replace_char == 1:
+	user_name = user_name.replace('i', '1')
+	user_name = user_name.replace('a', '4')
+	user_name = user_name.replace('e', '3')
+
+
+
 print user_name
