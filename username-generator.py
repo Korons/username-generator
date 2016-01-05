@@ -14,7 +14,7 @@ last = args.l
 char_set = string.ascii_uppercase + string.digits
 randstring = ''.join(random.sample(char_set*6, 6))
 replace_char = random.randint(1,10)
-user_name_how = random.randint(14,14)
+user_name_how = random.randint(1,14)
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 if user_name_how == 1:
 	user_name = first[0] + last
