@@ -1,10 +1,11 @@
 import argparse
 import random
 import string
-verbs = ['happy','sad','tall','short','malious','ravenous']
-nouns = ['hacker','rapist','lumberjack','horse','unicorn']
-
-parser = argparse.ArgumentParser(description='Generate fake data')
+verbs = ['happy','sad','tall','short','malious','ravenous','smooth']
+nouns = ['hacker','lumberjack','horse','unicorn']
+verbs_nfsw = []
+nouns_nfsw = ['rapist']
+parser = argparse.ArgumentParser(description='Generate a username')
 parser.add_argument("-f", help="Firstname")
 parser.add_argument("-l", help="Lastname")
 args = parser.parse_args()
@@ -56,6 +57,12 @@ if replace_char == 1:
 	user_name = user_name.replace('i', '1')
 	user_name = user_name.replace('a', '4')
 	user_name = user_name.replace('e', '3')
+elif replace_char == 2:
+	user_name = user_name.replace('_', '-')
+elif replace_char == 3:
+	user_name = user_name.replace('_', '7')
+elif replace_char == 3:
+	user_name = user_name/replace('m','nn')
 
 
 
