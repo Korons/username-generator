@@ -6,6 +6,7 @@ A simple username generator in python
 ```python username-generate.py -f FIRSTNAME -l LASTNAME```
 
 Inorder to use the gui you will need to install [Gooey][gooey]
+
 ```pip install Gooey```
 
 Will return a username based on your first and lastnames 
