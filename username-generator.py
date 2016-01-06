@@ -1,8 +1,8 @@
 import argparse
 import random
 import string
-verbs = ['happy','sad','tall','short','malious','ravenous','smooth']
-nouns = ['hacker','lumberjack','horse','unicorn']
+verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean']
+nouns = ['hacker','lumberjack','horse','unicorn','guy','girl']
 verbs_nfsw = []
 nouns_nfsw = ['rapist']
 parser = argparse.ArgumentParser(description='Generate a username')
@@ -14,7 +14,7 @@ last = args.l
 char_set = string.ascii_uppercase + string.digits
 randstring = ''.join(random.sample(char_set*6, 6))
 replace_char = random.randint(1,10)
-user_name_how = random.randint(1,14)
+user_name_how = random.randint(1,16)
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 if user_name_how == 1:
 	user_name = first[0] + last
@@ -51,6 +51,10 @@ elif user_name_how == 13:
 	user_name = last[3:6] + last[0:2]
 elif user_name_how == 14:
 	user_name = random.choice(verbs) +'_'+ random.choice(nouns)
+elif user_name_how == 15:
+	user_name = first + random.choice(verbs) + random.choice(nouns) + last
+elif user_name_how == 16:
+	user_name = "The_one_and_only_" + first
 else:
 	print "user_name_how unexpected vaule"
 if replace_char == 1:
