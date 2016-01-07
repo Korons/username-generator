@@ -1,16 +1,21 @@
 import argparse
 import random
 import string
+# Verbs and nouns for namegen
 verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean']
 nouns = ['hacker','lumberjack','horse','unicorn','guy','girl']
+# Not Safe For Work verbs and nouns to be added in later
 verbs_nfsw = []
 nouns_nfsw = ['rapist']
+
 parser = argparse.ArgumentParser(description='Generate a username')
 parser.add_argument("-f", help="Firstname")
 parser.add_argument("-l", help="Lastname")
 args = parser.parse_args()
+# Set first and last so I can reuse this code in namegen
 first = args.f
 last = args.l
+
 char_set = string.ascii_uppercase + string.digits
 randstring = ''.join(random.sample(char_set*6, 6))
 replace_char = random.randint(1,10)
