@@ -16,6 +16,18 @@ randstring = ''.join(random.sample(char_set*6, 6))
 replace_char = random.randint(1,10)
 user_name_how = random.randint(1,16)
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
+# Whats been done so far
+# first letter + last name
+# first 3 letters of first and all of last
+# 2-5th of first and first 6 of last
+# 1-2 of first and all of last
+# first 3 of first and 3-4 of last
+# first 3 of first and 1 of last
+# 2-4 of first and 0-3 of last
+# first 3 of first and 3-4 of last + numbers (spelled out)
+# first + random string
+# first + last but with first letter of first (john joe)
+# first 3 + last 3 but with first letter of first (joh joe)
 if user_name_how == 1:
 	user_name = first[0] + last
 elif user_name_how == 2:
@@ -55,12 +67,17 @@ elif user_name_how == 15:
 	user_name = first + random.choice(verbs) + random.choice(nouns) + last
 elif user_name_how == 16:
 	user_name = "The_one_and_only_" + first
+elif user_name_how == 17:
+	user_name = "The_one_and_only_" + first + "_the_" + random.choice(verbs) + "_" + last
+elif user_name_how == 18:
+
 else:
 	print "user_name_how unexpected vaule"
 if replace_char == 1:
 	user_name = user_name.replace('i', '1')
 	user_name = user_name.replace('a', '4')
 	user_name = user_name.replace('e', '3')
+	user_name = user_name.replace('l','|')
 elif replace_char == 2:
 	user_name = user_name.replace('_', '-')
 elif replace_char == 3:
