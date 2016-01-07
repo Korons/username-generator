@@ -44,7 +44,7 @@ numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 # first + last but with first letter of first (john joe)
 # first 3 + last 3 but with first letter of first (joh joe)
 
-
+# Code that generates username
 if user_name_how == 1:
 	user_name = first[0] + last
 elif user_name_how == 2:
