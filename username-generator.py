@@ -8,19 +8,29 @@ nouns = ['hacker','lumberjack','horse','unicorn','guy','girl']
 verbs_nfsw = []
 nouns_nfsw = ['rapist']
 
+# the parser
 parser = argparse.ArgumentParser(description='Generate a username')
 parser.add_argument("-f", help="Firstname")
 parser.add_argument("-l", help="Lastname")
 args = parser.parse_args()
+
 # Set first and last so I can reuse this code in namegen
 first = args.f
 last = args.l
 
+# Random string generation
 char_set = string.ascii_uppercase + string.digits
 randstring = ''.join(random.sample(char_set*6, 6))
+
+# if and how to repalce chars in the user name.
 replace_char = random.randint(1,10)
+
+# How to generate the user name
 user_name_how = random.randint(1,16)
+
+# Numbers that may be added to the username
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
+
 # Whats been done so far
 # first letter + last name
 # first 3 letters of first and all of last
@@ -33,6 +43,8 @@ numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 # first + random string
 # first + last but with first letter of first (john joe)
 # first 3 + last 3 but with first letter of first (joh joe)
+
+
 if user_name_how == 1:
 	user_name = first[0] + last
 elif user_name_how == 2:
@@ -78,6 +90,8 @@ elif user_name_how == 18:
 
 else:
 	print "user_name_how unexpected vaule"
+
+# The code that replace chars in the user name
 if replace_char == 1:
 	user_name = user_name.replace('i', '1')
 	user_name = user_name.replace('a', '4')
