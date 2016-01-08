@@ -1,9 +1,10 @@
 import argparse
 import random
 import string
+
 # Verbs and nouns for namegen
 verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean']
-nouns = ['hacker','lumberjack','horse','unicorn','guy','girl']
+nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','duck']
 # Not Safe For Work verbs and nouns to be added in later
 verbs_nfsw = []
 nouns_nfsw = ['rapist']
