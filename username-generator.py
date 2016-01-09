@@ -23,7 +23,7 @@ last = args.l
 char_set = string.ascii_uppercase + string.digits
 randstring = ''.join(random.sample(char_set*6, 6))
 
-# if and how to repalce chars in the user name.
+# If and how to repalce chars in the user name.
 replace_char = random.randint(1,10)
 
 # How to generate the user name
