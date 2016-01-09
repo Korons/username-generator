@@ -4,21 +4,49 @@ import string
 from gooey import Gooey
 @Gooey      
 def main():
+	# Verbs and nouns for namegen
 	verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean']
 	nouns = ['hacker','lumberjack','horse','unicorn','guy','girl']
+	# Not Safe For Work verbs and nouns to be added in later
 	verbs_nfsw = []
-	nouns_nfsw = ['rapist']
+	nouns_nfsw = ['rapist','fuck']
+	
+	# The parser
 	parser = argparse.ArgumentParser(description='Generate a username')
 	parser.add_argument("-f", help="Firstname")
 	parser.add_argument("-l", help="Lastname")
 	args = parser.parse_args()
+
+	# Set first and last so I can reuse this code in namegen
 	first = args.f
 	last = args.l
+
+	# Random string generation
 	char_set = string.ascii_uppercase + string.digits
 	randstring = ''.join(random.sample(char_set*6, 6))
+
+	# If and how to repalce chars in the user name.
 	replace_char = random.randint(1,10)
+
+	# How to generate the user name
 	user_name_how = random.randint(1,16)
+
+	# Numbers that may be added to the username
 	numbers = ['one','two','three','four','five','seven','eight','nine','ten']
+	
+	# Whats been done so far
+	# first letter + last name
+	# first 3 letters of first and all of last
+	# 2-5th of first and first 6 of last
+	# 1-2 of first and all of last
+	# first 3 of first and 3-4 of last
+	# first 3 of first and 1 of last
+	# 2-4 of first and 0-3 of last
+	# first 3 of first and 3-4 of last + numbers (spelled out)
+	# first + random string
+	# first + last but with first letter of first (john joe)
+	# first 3 + last 3 but with first letter of first (joh joe)
+
 	if user_name_how == 1:
 		user_name = first[0] + last
 	elif user_name_how == 2:
