@@ -27,7 +27,7 @@ randstring = ''.join(random.sample(char_set*6, 6))
 replace_char = random.randint(1,10)
 
 # How to generate the user name
-user_name_how = random.randint(19,19)
+user_name_how = random.randint(1,19)
 
 # Numbers that may be added to the username
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
@@ -86,11 +86,13 @@ elif user_name_how == 15:
 elif user_name_how == 16:
 	user_name = "The_one_and_only_" + first
 elif user_name_how == 17:
-	user_name = "The_one_and_only_" + first + "_the_" + random.choice(verbs) + "_" + last
-elif user_name_how == 18:
-	user_name = "Fucks_with_" + random.choice(nouns) + 's'
+	user_name = "The_one_and_only_" + first + "_the_" + random.choice(verbs) + "_" + last	
 elif user_name_how == 19:
-	user_name = "Fucks_with_" + random.choice(verbs) + '_' + random.choice(nouns) + 's'
+	how = random.randint(1,2)
+	if how == 1:	
+		user_name = "Fucks_with_" + random.choice(verbs) + '_' + random.choice(nouns) + 's'
+	elif how == 2:
+		user_name = "Fucks_with_" + random.choice(nouns) + 's'
 else:
 	print "user_name_how unexpected vaule"
 
