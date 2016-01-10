@@ -4,7 +4,7 @@ import string
 
 # Verbs and nouns for namegen
 verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean']
-nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','duck']
+nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck']
 # Not Safe For Work verbs and nouns to be added in later
 verbs_nfsw = []
 nouns_nfsw = ['rapist','fuck']
@@ -27,7 +27,7 @@ randstring = ''.join(random.sample(char_set*6, 6))
 replace_char = random.randint(1,10)
 
 # How to generate the user name
-user_name_how = random.randint(1,17)
+user_name_how = random.randint(1,18)
 
 # Numbers that may be added to the username
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
@@ -87,6 +87,8 @@ elif user_name_how == 16:
 	user_name = "The_one_and_only_" + first
 elif user_name_how == 17:
 	user_name = "The_one_and_only_" + first + "_the_" + random.choice(verbs) + "_" + last
+elif user_name_how == 18:
+	user_name = "Fucks_with_" + random.choice(nouns) + 's'
 else:
 	print "user_name_how unexpected vaule"
 
