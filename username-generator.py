@@ -2,6 +2,8 @@ import argparse
 import random
 import string
 
+user_name = ''
+
 # Verbs and nouns for namegen
 verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean']
 nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck']
@@ -26,9 +28,6 @@ randstring = ''.join(random.sample(char_set*6, 6))
 # If and how to repalce chars in the user name.
 replace_char = random.randint(1,10)
 
-# How to generate the user name
-user_name_how = random.randint(1,19)
-
 # Numbers that may be added to the username
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 
@@ -44,6 +43,9 @@ numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 # first + random string
 # first + last but with first letter of first (john joe)
 # first 3 + last 3 but with first letter of first (joh joe)
+
+# How to generate the user name
+user_name_how = random.randint(1,19)
 
 # Code that generates username
 if user_name_how == 1:
@@ -106,8 +108,16 @@ elif replace_char == 2:
 	user_name = user_name.replace('_', '-')
 elif replace_char == 3:
 	user_name = user_name.replace('_', '7')
-elif replace_char == 3:
-	user_name = user_name/replace('m','nn')
+elif replace_char == 4:
+	user_name = user_name.replace('m','nn')
+
+randstuff = random.randint(1,10)
+
+# This codes adds random stuff to the end of a username so it's more unique
+if randstuff == 1:
+	user_name = user_name + randstring
+else:
+	user_name = user_name
 
 
 
