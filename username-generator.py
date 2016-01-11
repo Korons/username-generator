@@ -27,6 +27,7 @@ randstring = ''.join(random.sample(char_set*6, 6))
 
 # Numbers that may be added to the username
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
+starts = ["Touches_","Gets_fucked_by_","Fucks_with_"]
 
 # Whats been done so far
 # first letter + last name
@@ -42,7 +43,7 @@ numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 # first 3 + last 3 but with first letter of first (joh joe)
 
 # How to generate the user name
-user_name_how = random.randint(1,20)
+user_name_how = random.randint(1,18)
 
 # Code that generates username
 if user_name_how == 1:
@@ -89,21 +90,9 @@ elif user_name_how == 17:
 elif user_name_how == 18:
 	how = random.randint(1,2)
 	if how == 1:	
-		user_name = "Fucks_with_" + random.choice(verbs) + '_' + random.choice(nouns) + 's'
+		user_name = random.choice(starts) + random.choice(verbs) + '_' + random.choice(nouns) + 's'
 	elif how == 2:
-		user_name = "Fucks_with_" + random.choice(nouns) + 's'
-elif user_name_how == 19:
-	how = random.randint(1,2)
-	if how == 1:	
-		user_name = "Gets_fucked_by_" + random.choice(verbs) + '_' + random.choice(nouns) + 's'
-	elif how == 2:
-		user_name = "Gets_fucked_by_" + random.choice(nouns) + 's'
-elif user_name_how == 20:
-	how = random.randint(1,2)
-	if how == 1:	
-		user_name = "Touches_" + random.choice(verbs) + '_' + random.choice(nouns) + 's'
-	elif how == 2:
-		user_name = "Touches_" + random.choice(nouns) + 's'
+		user_name = random.choice(starts) + random.choice(nouns) + 's'
 else:
 	print "user_name_how unexpected vaule\n" + str(user_name_how)
 
