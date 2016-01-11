@@ -42,7 +42,7 @@ numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 # first 3 + last 3 but with first letter of first (joh joe)
 
 # How to generate the user name
-user_name_how = random.randint(1,19)
+user_name_how = random.randint(1,20)
 
 # Code that generates username
 if user_name_how == 1:
@@ -98,6 +98,12 @@ elif user_name_how == 19:
 		user_name = "Gets_fucked_by_" + random.choice(verbs) + '_' + random.choice(nouns) + 's'
 	elif how == 2:
 		user_name = "Gets_fucked_by_" + random.choice(nouns) + 's'
+elif user_name_how == 20:
+	how = random.randint(1,2)
+	if how == 1:	
+		user_name = "Touches_" + random.choice(verbs) + '_' + random.choice(nouns) + 's'
+	elif how == 2:
+		user_name = "Touches_" + random.choice(nouns) + 's'
 else:
 	print "user_name_how unexpected vaule\n" + str(user_name_how)
 
