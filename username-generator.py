@@ -27,7 +27,7 @@ randstring = ''.join(random.sample(char_set*6, 6))
 
 # Numbers that may be added to the username
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
-starts = ["Touches_","Gets_fucked_by_","Fucks_with_"]
+starts = ["Touches_","Gets_fucked_by_","Fucks_with_","Loves_","Hates_"]
 
 # Whats been done so far
 # first letter + last name
