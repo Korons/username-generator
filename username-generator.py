@@ -5,7 +5,7 @@ import string
 user_name = ''
 
 # Verbs and nouns for namegen
-verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean']
+verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober']
 nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck']
 # Not Safe For Work verbs and nouns to be added in later
 verbs_nfsw = []
