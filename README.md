@@ -7,7 +7,11 @@ A simple username generator in python
 
 Or to generate names that include NFSW words
 
-``python username-generate.py -f FIRSTNAME -l LASTNAME -n yes```
+```python username-generate.py -f FIRSTNAME -l LASTNAME -n yes```
+
+Or to generate NSFW only names
+
+```python username-generate.py -f FIRSTNAME -l LASTNAME -n only```
 
 Inorder to use the gui you will need to install [Gooey][gooey]
 
