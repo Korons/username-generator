@@ -15,7 +15,12 @@ nouns_nfsw = ['rapist','fuck']
 parser = argparse.ArgumentParser(description='Generate a username')
 parser.add_argument("-f", help="Firstname")
 parser.add_argument("-l", help="Lastname")
+parser.add_argument("-n", help="Use NFSW verbs and nouns")
 args = parser.parse_args()
+
+if args.n == 'yes':
+	nouns = nouns + nouns_nfsw
+	starts = starts + starts_nfsw
 
 # Set first and last so I can reuse this code in namegen
 first = args.f
@@ -27,7 +32,8 @@ randstring = ''.join(random.sample(char_set*6, 6))
 
 # Numbers that may be added to the username
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
-starts = ["Touches_","Gets_fucked_by_","Fucks_with_","Loves_","Hates_"]
+starts = ["Touches_","Loves_","Hates_"]
+starts_nfsw ["Gets_fucked_by_","Fucks_with_"]
 
 # Whats been done so far
 # first letter + last name
