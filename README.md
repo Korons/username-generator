@@ -3,6 +3,8 @@ A simple username generator in python
 
 ## Usage 
 
+Will return a username based on your first and lastnames
+
 ```python username-generate.py -f FIRSTNAME -l LASTNAME```
 
 Or to generate names that include NFSW words
@@ -15,9 +17,7 @@ Or to generate NSFW only names
 
 Inorder to use the gui you will need to install [Gooey][gooey]
 
-```pip install Gooey```
-
-Will return a username based on your first and lastnames 
+```pip install Gooey``` 
 
 ## Features 
  1. Names base on random verb and noun (happy_horse)
