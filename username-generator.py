@@ -6,12 +6,12 @@ user_name = ''
 
 # Verbs and nouns for namegen
 verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober']
-nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck']
+nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck','dog']
 # Not Safe For Work verbs and nouns to be added in later
 verbs_nfsw = []
-nouns_nfsw = ['rapist','fuck']
+nouns_nfsw = ['rapist','fuck','pedophile']
 
-starts = ["Touches_","Loves_","Hates_"]
+starts = ["Touches_","Loves_","Hates_",'Licks_']
 starts_nfsw = ["Gets_fucked_by_","Fucks_with_"]
 
 # The parser
@@ -22,7 +22,7 @@ parser.add_argument("-n", help="Use NFSW verbs and nouns")
 args = parser.parse_args()
 
 if args.n == 'yes':
-	nouns = nouns + nouns_nfsw
+	nouns = nouns + nouns_nfsw 
 	starts = starts + starts_nfsw
 elif args.n == 'only':
 	nouns = nouns_nfsw
