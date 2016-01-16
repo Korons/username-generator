@@ -8,7 +8,7 @@ user_name = ''
 verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober']
 nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck','dog']
 # Not Safe For Work verbs and nouns to be added in later
-verbs_nfsw = []
+verbs_nfsw = ['drunk','shitfaced','rapie']
 nouns_nfsw = ['rapist','fuck','pedophile']
 
 starts = ["Touches_","Loves_","Hates_",'Licks_']
