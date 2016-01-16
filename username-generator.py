@@ -12,7 +12,7 @@ verbs_nfsw = ['drunk','shitfaced','rapie']
 nouns_nfsw = ['rapist','fuck','pedophile']
 
 starts = ["Touches_","Loves_","Hates_",'Licks_']
-starts_nfsw = ["Gets_fucked_by_","Fucks_with_"]
+starts_nfsw = ["Gets_fucked_by_","Fucks_with_",'Humps_']
 
 # The parser
 parser = argparse.ArgumentParser(description='Generate a username')
