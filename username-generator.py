@@ -5,11 +5,11 @@ import string
 user_name = ''
 
 # Verbs and nouns for namegen
-verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober']
+verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober',"smart","dumb","rich","poor"]
 nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck','dog']
 # Not Safe For Work verbs and nouns to be added in later
-verbs_nfsw = ['drunk','shitfaced','rapie']
-nouns_nfsw = ['rapist','fuck','pedophile']
+verbs_nfsw = ['drunk','shitfaced','rapie',"high"]
+nouns_nfsw = ['rapist','fuck','pedophile','drug_dealling']
 
 starts = ["Touches_","Loves_","Hates_",'Licks_']
 starts_nfsw = ["Gets_fucked_by_","Fucks_with_",'Humps_']
