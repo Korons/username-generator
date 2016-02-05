@@ -6,7 +6,7 @@ import sys
 user_name = ''
 
 # Verbs and nouns for namegen
-verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober',"smart",'dumb','rich','poor','mega','music','lord']
+verbs = ['awkward','thin','thick','happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober',"smart",'dumb','rich','poor','mega','music','lord']
 nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck','dog','sheep','zombie','tennis','doctor']
 # Not Safe For Work verbs and nouns to be added in later
 verbs_nfsw = ['drunk','shitfaced','rapie','high','drug_dealing','junkie','fucker_of']
