@@ -1,24 +1,26 @@
 import argparse
 import random
 import string
+import sys
 
 user_name = ''
 
 # Verbs and nouns for namegen
-verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober',"smart","dumb","rich","poor"]
+verbs = ['happy','sad','tall','short','malious','ravenous','smooth','loving','mean','weird','high','sober',"smart","dumb","rich","poor",'mega']
 nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','male','female','men','women','duck','dog']
 # Not Safe For Work verbs and nouns to be added in later
 verbs_nfsw = ['drunk','shitfaced','rapie',"high"]
 nouns_nfsw = ['rapist','fuck','pedophile','drug_dealling']
 
 starts = ["Touches_","Loves_","Hates_",'Licks_']
-starts_nfsw = ["Gets_fucked_by_","Fucks_with_",'Humps_']
+starts_nfsw = ["Gets_fucked_by_","Fucks_with_",'Humps_','Fucks_']
 
 # The parser
 parser = argparse.ArgumentParser(description='Generate a username')
 parser.add_argument("-f", help="Firstname")
 parser.add_argument("-l", help="Lastname")
 parser.add_argument("-n", help="Use NFSW verbs and nouns")
+parser.add_argument("-p", help="Generate a username not based on your name")
 args = parser.parse_args()
 
 if args.n == 'yes':
@@ -39,6 +41,10 @@ randstring = ''.join(random.sample(char_set*6, 6))
 # Numbers that may be added to the username
 numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 
+if args.p:
+	user_name = random.choice(starts) + random.choice(verbs) + '_' + random.choice(nouns) + 's'
+	print user_name
+	sys.exit()
 # Whats been done so far
 # first letter + last name
 # first 3 letters of first and all of last
