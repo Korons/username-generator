@@ -43,8 +43,6 @@ numbers = ['one','two','three','four','five','seven','eight','nine','ten']
 
 if args.p:
 	user_name = random.choice(starts) + random.choice(verbs) + '_' + random.choice(nouns) + 's'
-	print user_name
-	sys.exit()
 # Whats been done so far
 # first letter + last name
 # first 3 letters of first and all of last
@@ -61,56 +59,60 @@ if args.p:
 # How to generate the user name
 user_name_how = random.randint(1,18)
 
-# Code that generates username
-if user_name_how == 1:
-	user_name = first[0] + last
-elif user_name_how == 2:
-	user_name = first[0:2] + last[0:2]
-elif user_name_how == 3:
-	user_name = first[2:5] + last[0:5]
-elif user_name_how == 4:
-	user_name = first[1:2] + last
-elif user_name_how == 5:
-	user_name = first[0:2] + first[3:4]
-elif user_name_how == 6:
-	user_name = last[0:2] + last[1]
-elif user_name_how == 7:
-	user_name = first[2:4] + last[0:3]
-elif user_name_how == 8:
-	numbs = random.randint(10, 100)
-	numbs = str(numbs)
-	user_name = first[0] + last + " " + numbs
-	user_name = user_name.replace(" ", "")
-elif user_name_how == 9:
-	user_name = first + randstring
-elif user_name_how == 10:
-	first = first[:1].upper() + first[1:]
-	last = first[:1].upper() + last[1:]
-	user_name = first + last
-elif user_name_how == 11:
-	first = first[:1].upper() + first[1:]
-	last = first[:1].upper() + last[1:]
-	user_name = first[0:2] + last[0:2]
-elif user_name_how == 12:
-	user_name = first + random.choice(numbers)
-elif user_name_how == 13:
-	user_name = last[3:6] + last[0:2]
-elif user_name_how == 14:
-	user_name = random.choice(verbs) +'_'+ random.choice(nouns)
-elif user_name_how == 15:
-	user_name = first + random.choice(verbs) + random.choice(nouns) + last
-elif user_name_how == 16:
-	user_name = "The_one_and_only_" + first
-elif user_name_how == 17:
-	user_name = "The_one_and_only_" + first + "_the_" + random.choice(verbs) + "_" + last	
-elif user_name_how == 18:
-	how = random.randint(1,2)
-	if how == 1:	
-		user_name = random.choice(starts) + random.choice(verbs) + '_' + random.choice(nouns) + 's'
-	elif how == 2:
-		user_name = random.choice(starts) + random.choice(nouns) + 's'
-else:
-	print "user_name_how unexpected vaule\n" + str(user_name_how)
+# If the user has passed -p we skip this 
+if not args.p:
+
+	# Code that generates username
+	if user_name_how == 1:
+		user_name = first[0] + last
+	elif user_name_how == 2:
+		user_name = first[0:2] + last[0:2]
+	elif user_name_how == 3:
+		user_name = first[2:5] + last[0:5]
+	elif user_name_how == 4:
+		user_name = first[1:2] + last
+	elif user_name_how == 5:
+		user_name = first[0:2] + first[3:4]
+	elif user_name_how == 6:
+		user_name = last[0:2] + last[1]
+	elif user_name_how == 7:
+		user_name = first[2:4] + last[0:3]
+	elif user_name_how == 8:
+		numbs = random.randint(10, 100)
+		numbs = str(numbs)
+		user_name = first[0] + last + " " + numbs
+		user_name = user_name.replace(" ", "")
+	elif user_name_how == 9:
+		user_name = first + randstring
+	elif user_name_how == 10:
+		first = first[:1].upper() + first[1:]
+		last = first[:1].upper() + last[1:]
+		user_name = first + last
+	elif user_name_how == 11:
+		first = first[:1].upper() + first[1:]
+		last = first[:1].upper() + last[1:]
+		user_name = first[0:2] + last[0:2]
+	elif user_name_how == 12:
+		user_name = first + random.choice(numbers)
+	elif user_name_how == 13:
+		user_name = last[3:6] + last[0:2]
+	elif user_name_how == 14:
+		user_name = random.choice(verbs) +'_'+ random.choice(nouns)
+	elif user_name_how == 15:
+		user_name = first + random.choice(verbs) + random.choice(nouns) + last
+	elif user_name_how == 16:
+		user_name = "The_one_and_only_" + first
+	elif user_name_how == 17:
+		user_name = "The_one_and_only_" + first + "_the_" + random.choice(verbs) + "_" + last	
+	elif user_name_how == 18:
+		how = random.randint(1,2)
+		if how == 1:	
+			user_name = random.choice(starts) + random.choice(verbs) + '_' + random.choice(nouns) + 's'
+		elif how == 2:
+			user_name = random.choice(starts) + random.choice(nouns) + 's'
+	else:
+		print "user_name_how unexpected vaule\n" + str(user_name_how)
+		sys.exit()
 
 # If and how to repalce chars in the user name.
 replace_char = random.randint(1,10)
