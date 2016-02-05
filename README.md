@@ -15,6 +15,10 @@ Or to generate NSFW only names
 
 ```python username-generate.py -f FIRSTNAME -l LASTNAME -n only```
 
+Or to generate usernames not based on your name
+
+```python username-generate.py -p true```
+
 Inorder to use the gui you will need to install [Gooey][gooey]
 
 ```pip install Gooey``` 
