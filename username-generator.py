@@ -12,8 +12,8 @@ nouns = ['hacker','lumberjack','horse','unicorn','guy','girl','man','woman','mal
 verbs_nfsw = ['drunk','shitfaced','rapie','high','drug_dealing','junkie','fucker_of']
 nouns_nfsw = ['rapist','fuck','pedophile','fucker']
 
-starts = ["Touches_","Loves_","Hates_",'Licks_']
-starts_nfsw = ["Gets_fucked_by_","Fucks_with_",'Humps_','Fucks_']
+starts = ['Touches_','Loves_','Hates_','Licks_'.'Feels_']
+starts_nfsw = ["Gets_fucked_by_","Fucks_with_",'Humps_','Fucks_','Pimps_']
 
 # The parser
 parser = argparse.ArgumentParser(description='Generate a username')
